@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="Отдел по связям с общественностью. Коммуникации, медиа, общественные связи.">
+  <title>Отдел по связям с общественностью</title>
+  <script>
+    // Set the animation state before the first paint to avoid a text flash.
+    document.documentElement.classList.add('is-animated');
+  </script>
+  <style>
+    :root { color-scheme: light; background: #f5f4f0; color: #292925; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+    main {
+      min-height: 100vh; min-height: 100svh;
+      display: flex; align-items: center;
+      padding: max(36px, env(safe-area-inset-top)) clamp(22px, 7vw, 112px) max(36px, env(safe-area-inset-bottom));
+    }
+    .composition { width: 100%; max-width: 1280px; margin: 0 auto; padding-block: 36px; }
+    h1 { margin: 0; font-size: clamp(16px, 4.9vw, 76px); font-weight: 600; letter-spacing: -.045em; line-height: 1.22; }
+    .line { display: block; white-space: nowrap; }
+    .word { display: inline-block; }
+    .caption { width: fit-content; max-width: 100%; margin-top: clamp(30px, 4vw, 50px); }
+    .rule { width: 100%; height: 1px; background: #b3b1a5; margin: 0 0 22px; }
+    .subtitle { margin: 0; max-width: 100%; font-size: clamp(14px, 1.3vw, 16px); font-weight: 600; line-height: 1.8; letter-spacing: .035em; color: #505049; text-wrap: balance; }
+    .phrase { white-space: nowrap; }
+    .dot { padding-inline: .45em; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    @keyframes reveal { from { opacity: 0; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: no-preference) {
+      .is-animated .word { opacity: 0; animation: reveal 800ms ease-out var(--delay) forwards; }
+      .is-animated .rule, .is-animated .subtitle { opacity: 0; animation: reveal 1000ms ease-out 3000ms forwards; }
+      .is-animated .subtitle { animation-delay: 3250ms; }
+    }
+    @media (max-width: 600px) {
+      main { padding-inline: 22px; }
+      h1 { font-size: clamp(14px, 5.05vw, 31px); letter-spacing: -.05em; line-height: 1.4; }
+      .subtitle { max-width: 100%; font-size: 14px; letter-spacing: .015em; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="composition" aria-labelledby="department-title">
+      <h1 id="department-title">
+        <span class="sr-only">ОТДЕЛ ПО СВЯЗЯМ С ОБЩЕСТВЕННОСТЬЮ</span>
+        <span class="line" aria-hidden="true"><span class="word" style="--delay: 900ms">ОТДЕЛ</span> <span class="word" style="--delay: 1150ms">ПО</span> <span class="word" style="--delay: 1400ms">СВЯЗЯМ</span></span>
+        <span class="line" aria-hidden="true"><span class="word" style="--delay: 1650ms">С</span> <span class="word" style="--delay: 1900ms">ОБЩЕСТВЕННОСТЬЮ</span></span>
+      </h1>
+      <div class="caption">
+        <div class="rule" aria-hidden="true"></div>
+        <p class="subtitle"><span class="phrase">коммуникации</span><span class="dot">·</span><span class="phrase">медиа</span><span class="dot">·</span><span class="phrase">общественные связи</span></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
